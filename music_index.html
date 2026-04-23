@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+
+  <!-- ✅ STYLESHEET LINK -->
+  <link rel="stylesheet" href="musicstyle.css">
+</head>
+<body>
+
+  <div class="player">
+    <img id="cover" src="D:\muskan\sanspriya techtrio\internship\images\sans img.jpg" alt="Album Cover">
+
+    <h2 id="title">Song Title</h2>
+
+    <audio id="audio"></audio>
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="playPause()">▶️</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+  </div>
+
+  <!-- ✅ JS LINK -->
+  <script src="musicscript.js"></script>
+</body>
+
+</html>
