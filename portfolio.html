@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vaibhav kadam Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+    header h2 {
+    margin-right: 20px;
+    }
+    header nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    header nav a:hover { color: #033970; }
+    
+
+    section {
+    min-height: 100vh;
+    padding: 100px 20px;
+    scroll-margin-top: 120px;
+    }
+
+    #hero {
+      background: linear-gradient(to right, #04377e, #3698f4);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    #hero h1 { font-size: 3rem; }
+    #hero p { font-size: 1.2rem; }
+    #hero a {
+      margin-top: 20px;
+      background:#fff;
+      color:#222;
+      padding:10px 20px;
+      border-radius:5px;
+      text-decoration:none;
+      transition: background 0.3s;
+    }
+    #hero a:hover { background:#ddd; }
+
+    #about, #skills, #projects, #resume, #contact {
+      background: #fff;
+      margin: 20px auto;
+      border-radius: 8px;
+      padding: 40px;
+      max-width: 1000px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 { text-align: center; margin-bottom: 20px; }
+
+    .skill {
+      margin: 15px 0;
+    }
+    .bar {
+      background: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .progress {
+      background: #3698f4;
+      height: 10px;
+      transition: width 1s ease;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;   
+      align-items: center;      
+      text-align: center;       
+      padding: 15px;
+
+    }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card img {
+    width: 100%;           
+    height: 180px;         
+    object-fit: cover;    
+    display: block;        
+    margin-bottom: 10px;
+  } 
+    .project-card h3, 
+    .project-card p, 
+    .project-card a {
+    margin: 5px 0;            
+    }
+
+
+    /* Resume Timeline */
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 2px;
+      background: #3698f4;
+      top: 0; bottom: 0;
+    }
+    .timeline-item {
+      position: relative;
+      width: 45%;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .timeline-item.left { left: 0; }
+    .timeline-item.right { left: 55%; }
+    .timeline-item h3 { margin-top: 0; }
+
+    /* Contact */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #3698f4;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover { background: #3698f4; }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media(max-width:768px) {
+      .timeline-item {
+        width: 90%;
+        left: 5% !important;
+      }
+      header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>vaibhav kadam</h2>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <h1>Hello, I'm vaibhav kadam</h1>
+  <p>STUDENT | learner | Programmer | Creative Thinking</p>
+  <a href="#projects">View My Work</a>
+</section>
+
+<section id="about" class="fade-in">
+  <h2>About Me</h2>
+  <p>Hello! I’m vaibhav kadam, a passionate student currently pursuing BBA-CA (Bachelor of Business Administration in Computer Applications). I have a strong interest in computer science and web development. I enjoy learning new technologies and building projects that help improve my programming and problem-solving skills.I like creating practical projects that combine both creativity and logic. During my learning journey, I have also worked on internship projects where I applied programming concepts to real-world problems.
+
+I am always eager to learn new tools, improve my technical skills, and explore opportunities in web development and software development.</p>
+</section>
+
+<section id="projects" class="fade-in">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <img src="D:\collage last projact\images.png" alt="Project 1">
+      <h3>hangman game</h3>
+      <p>A hangman game implemented in python.</p>
+      <a href="https://github.com/vaibhavkadam982003-alt/codealpha_tasks/blob/main/hangman2.py">View My Work</a>
+    </div>
+    <div class="project-card">
+      <img src="D:\collage last projact\stock.jpg" alt="Project 2">
+      <h3>Stock portfolio tracker</h3>
+      <p>it track the stock portfolio.</p>
+      <a href="https://github.com/vaibhavkadam982003-alt/codealpha_tasks/blob/main/stock.py">View My Work</a>
+    </div>
+    <div class="project-card1">
+      <img src="D:\collage last projact\music.png">
+      <h3>music player</h3>
+      <p>frant end.</p>
+      <a href="https://github.com/vaibhavkadam982003-alt/codealpha_tasks/blob/main
+      /music_index.html">View My Work</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="resume" class="fade-in">
+  <h2>Resume</h2>
+  <div class="timeline">
+    <div class="timeline-item left">
+      <h3>2023 - Online Scrabble Collection</h3>
+      <p>Developed an Online Scrabble Collection website where users can play and explore word games, keep track of scores, and challenge friends in real-time.
+Built using HTML, CSS, and JavaScript with interactive Ul, score system and multiplayer functionality.</p>
+    </div>
+    <div class="timeline-item right">
+      <h3>2024 - Cyber Security Projec</h3>
+      <p>Developed a Cyber Security Project focused on detecting and preventing common web vulnerabilities such as SQL Injection, XSS, and Brute Force Attacks.
+Built using Python, Flask, and SQLite with secure authentication, logging, and threat detection mechanisms.</p>
+    </div>
+    <div class="timeline-item left">
+      <h3>2025 -Online E-crd Shop</h3>
+      <p>Developed an Online E-card Shop website where users can browse, customize, and send digital greeting cards for various occasions.
+Built using HTML, CSS, JavaScript and localStorage for cart and user preferences.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="fade-in">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="name" placeholder="your name" required>
+    <input type="email" placeholder="your email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 vaibhav kadam Portfolio</p>
+</footer>
+
+<script>
+  // Smooth scroll for navigation links
+  document.querySelectorAll('header nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Fade-in animation on scroll
+  const faders = document.querySelectorAll('.fade-in');
+  window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  });
+</script>
